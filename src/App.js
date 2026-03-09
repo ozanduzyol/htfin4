@@ -310,12 +310,28 @@ export default function App() {
                 {years.map(y => <option key={y} value={y}>{y}</option>)}
               </select>
             </div>
-            <input
-              type="date"
-              value={form.tarih}
-              onChange={e => setForm(f => ({ ...f, tarih: e.target.value }))}
-            style={{ ...inp, marginBottom: 14, fontSize: 13, padding: "10px 14px" }}
-            />
+            <div style={{ marginBottom: 14 }}>
+              <input
+                type="date"
+                value={form.tarih}
+                onChange={e => setForm(f => ({ ...f, tarih: e.target.value }))}
+                style={{
+                  width: "100%",
+                  padding: "10px 14px",
+                  borderRadius: 14,
+                  border: "1px solid #2a2a3a",
+                  background: "#1a1a24",
+                  color: "#e8e4f0",
+                  fontFamily: "inherit",
+                  fontSize: 13,
+                  outline: "none",
+                  boxSizing: "border-box",
+                  WebkitAppearance: "none",
+                  appearance: "none",
+                  height: 44
+                }}
+              />
+          </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8, marginBottom: 16 }}>
               {CATEGORIES.map(c => (
