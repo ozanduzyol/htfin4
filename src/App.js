@@ -417,7 +417,7 @@ export default function App() {
                         }}>{c.icon}</div>
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <div style={{ fontWeight: "bold", fontSize: 14, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{e.aciklama}</div>
-                          <div style={{ fontSize: 11, color: C.muted, marginTop: 2 }}>{c.label}</div>
+                          <div style={{ fontSize: 11, color: C.muted, marginTop: 2 }}>{c.label} · {e.tarih ? new Date(e.tarih).toLocaleDateString("tr-TR") : ""}</div>
                         </div>
                         <div style={{ fontWeight: "bold", color: c.color, fontSize: 15, flexShrink: 0 }}>
                           ₺{Number(e.amount).toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
